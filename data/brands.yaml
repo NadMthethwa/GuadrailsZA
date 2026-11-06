@@ -1,0 +1,43 @@
+# Official identities for the brand-impersonation check.
+#
+# EVERY entry starts as verified: false. Confirm each value against the brand's own
+# website / official channels before flipping it to true. Unverified values may be used
+# by the engine but must NOT be treated as ground truth in tests (see CLAUDE.md).
+#
+# official_senders: SMS short codes, alpha sender IDs, WhatsApp numbers the brand uses.
+#   Left empty on purpose — fill in from real legitimate messages you have received.
+# official_domains: registrable domains (subdomains of these count as official).
+
+brands:
+  sars:
+    display_name: SARS
+    aliases: [sars, "south african revenue service", efiling, "e-filing"]
+    official_domains: [sars.gov.za]
+    official_senders: []
+    verified: false
+
+  capitec:
+    display_name: Capitec Bank
+    aliases: [capitec, "capitec bank", cashsend, "cash send"]
+    official_domains: [capitecbank.co.za]
+    official_senders: []
+    verified: false
+
+  fnb:
+    display_name: FNB
+    aliases: [fnb, "first national bank", ewallet, "e-wallet", "cash@atm"]
+    official_domains: [fnb.co.za]
+    official_senders: []
+    verified: false
+
+  sapo:
+    display_name: South African Post Office
+    aliases: ["post office", sapo, "postnet"]   # check: PostNet is a separate company
+    official_domains: [postoffice.co.za]
+    official_senders: []
+    verified: false
+
+# Add next (Phase 1 stretch): absa, standard_bank, nedbank, tymebank, takealot,
+# the courier companies you see impersonated most, Vodacom, MTN.
+
+shorteners: [bit.ly, tinyurl.com, t.co, cutt.ly, is.gd, rb.gy, shorturl.at, tiny.cc]

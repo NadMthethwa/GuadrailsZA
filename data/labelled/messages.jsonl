@@ -1,0 +1,1 @@
+{"id": "example-delete-me", "channel": "sms", "sender": "<PHONE>", "text": "FORMAT EXAMPLE ONLY - replace this line with your real anonymised messages", "label": "scam", "typology": "unknown", "source": "format-example", "hard_negative": false}
